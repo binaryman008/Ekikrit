@@ -5,6 +5,8 @@
 }
 
 .call-now {
+    display: flex;
+    justify-content: center;
     background-color: rgb(240, 32, 32);
     text-align: right;
     padding-right: 5px;
@@ -41,9 +43,7 @@ nav img {
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-}
-
-.nav-links ul li a {
+    cursor: pointer;
     color: #fff;
     text-decoration: none;
     font-size: 13px;
@@ -104,11 +104,25 @@ nav .fa {
     display:none;
 }
 
+.container {
+    background-color: rgb(204, 253, 237);
+}
+
+.second-section .menu {
+    padding-top: 100px;
+}
+
+.second-section .menu ul li {
+    list-style-type: square;
+    border-style: none none dotted;
+    padding-top:8px;
+}
+
 .about-us {
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 75px;
+    padding-top: 20px;
 }
 
 .about-us h1 {
@@ -122,6 +136,29 @@ nav .fa {
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
+}
+
+.contact-us-container {
+    background-color: rgb(26, 25, 25);
+    color: white
+}
+
+.contact-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 85%;
+    margin-left:13em;
+    padding-top: 25px;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 29px;
+}
+.social-links a img {
+    padding-top: 20px;
+    padding-left:20px;
+    width: 30px
 }
 
 @media(max-width:700px) {
@@ -154,5 +191,16 @@ nav .fa {
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
+    }
+}
+
+@media (min-width:701px){
+    .call-now p {
+        padding-right: 25px;
+    }
+    .second-section {
+        display: flex;
+        width:80%;
+        margin:auto;
     }
 }
