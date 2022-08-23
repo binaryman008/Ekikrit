@@ -12,17 +12,27 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <section class="call-now">Helpline No: +919717533769 | <i class="fa fa-envelope-o"></i> ekikritentps@gmail.com</section>
+    <section class="call-now">
+        <p>
+            <i class="fa fa-envelope-o"></i> ekikritentps@gmail.com
+        </p>
+        <p>
+        |
+        </p>
+        <p>
+            Helpline No : +919717533769
+        </p>
+    </section>
     <section class="header">
         <nav>
             <a href="#"><img src="./Ekikrit-logos_white.jpg" alt=""></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICE</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li>HOME</li>
+                    <li class="about">ABOUT</li>
+                    <li>SERVICES</li>
+                    <li class="contact">CONTACT US</li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -30,31 +40,75 @@
         <div class="text-box">
             <h1>Welcome to Ekikrit Enterprises</h1>
             <p>At Ekikrit we provide complete solutions from House-Keeping to Sanitation services.</p>
-            <a href="#about-us" class="hero-btn">Scroll Down to Know More &darr;</a>
+            <button class="hero-btn">Scroll Down to Know More &darr;</button>
         </div>
     </section>
 
 
     <!-- --------- About Us --------- -->
-    <div class="second-section">
-        <section>
-            services
-        </section>
-        <section class="about-us">
-            <h1>About Us</h1>
-            <p>We 'Ekikrit Enterprises' are a sole proprietorship based firm engaged in providing all types of
-                Manpower supply, Stationary items, House-Keeping work, Conservancy work, Maintenance renting and
-                Road sweeping by machine and all work related to Swachhta Abhiyan like Garbage disposal, Water disposal etc.
-            </p>
-            <p>
-                We provide high standard srevices to fit your requirement and ensure smooth operation.
-            </p>
-        </section>
+    <div class="container">
+        <div class="second-section">
+            <div class="menu">
+                <h1>Our Services</h1>
+                <ul>
+                    <li>Manpower Supply</li>
+                    <li>Stationary Items</li>
+                    <li>House-Keeping</li>
+                    <li>Conservancy Work</li>
+                    <li>Road Sweeping By Machine</li>
+                    <li>General Pest Control</li>
+                    <li>Termite Control</li>
+                    <li>Rodent Control</li>
+                    <li>Disinfection Spray</li>
+                </ul>
+            </div>
+            <section class="about-us">
+                <h1>About Us</h1>
+                <p>We 'Ekikrit Enterprises' are a sole proprietorship based firm engaged in providing all types of
+                    Manpower supply, Stationary items, House-Keeping work, Conservancy work, Road sweeping by machine, Pest Control and all work related to Swachhta Abhiyan like Garbage disposal, Water disposal etc.
+                </p>
+                <p>
+                    We provide high standard srevices to fit your requirement and ensure smooth operation.
+                </p>
+            </section>
+        </div>
     </div>
-    
+
+    <div class="contact-us-container">
+        <div class="contact-us">
+            <div class="office">
+                This is my office Address
+            </div>
+            <div class="email">
+                <i class="fa fa-envelope-o"></i> : ekikritentps@gmail.com
+            </div>
+            <div class="phone">
+                Phone : +919717533769
+            </div>
+        </div>
+        <div class="social-links">
+            <a href=""><img src="./facebook.png" alt=""></a>
+            <a href=""><img src="./twitter.png" alt=""></a>
+            <a href=""><img src="./linked_in.png" alt=""></a>
+        </div>
+    </div>
+    </div>
 
     <script>
-        var navLinks = document.getElementById("navLinks")
+        let navLinks = document.getElementById("navLinks");
+        let aboutTag = document.querySelector(".container");
+        let about = document.querySelector(".about");
+        let contact = document.querySelector(".contact")
+        let heroBtn = document.querySelector(".hero-btn")
+
+        heroBtn.addEventListener("click", (e)=> {
+            aboutTag.scrollIntoView(true);
+        })
+
+        about.addEventListener("click", (e)=> {
+            aboutTag.scrollIntoView(true);
+        })
+        
         function showMenu(){
             navLinks.style.right = "0";
         }
